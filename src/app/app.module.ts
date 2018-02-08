@@ -5,16 +5,20 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { WarningComponent } from './warning/warning.component';
+import { BindingComponent } from './binding/binding.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     WarningComponent,
-    SuccessComponent
+    SuccessComponent,
+    BindingComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
