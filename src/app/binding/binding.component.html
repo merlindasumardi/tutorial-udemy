@@ -1,7 +1,6 @@
 
   <input type="text" class="form-control" [(ngModel)]="username">
   <p>{{username}}</p>
-  <button [disabled]='isEmpty' (click)="onClickButton()">Click</button>
-
-
-<!-- <input type="text" class="form-control"> -->
+  <button [disabled]='isEmpty' (click)="onClickButton()">Display Details</button>
+  <p *ngIf="isHide == false">Secret Story: BlackHole</p>
+  <p *ngFor="let log of logs" [ngStyle]="{backgroundColor: log >= 5 ? 'blue': 'transparent'}" [ngClass]="{'white-text': log >= 5}">{{log}}</p>

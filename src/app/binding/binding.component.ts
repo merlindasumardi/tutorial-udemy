@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 export class BindingComponent implements OnInit {
   isEmpty = true;
   username= 'linda';
+  isHide =  false;
+  logs: any = [];
+  num = 1;
 
   constructor() { }
 
@@ -19,7 +22,10 @@ export class BindingComponent implements OnInit {
   }
 
   onClickButton() {
-    this.username = '';
+    if ( this.isHide ===  false) { this.isHide = true; } else { this.isHide = false; }
+    this.logs.push(this.num++);
+    console.log(this.logs);
+
 }
 
 }
