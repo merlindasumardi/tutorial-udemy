@@ -22,7 +22,7 @@ export class BindingComponent implements OnInit {
   }
 
   onClickButton() {
-    if ( this.isHide ===  false) { this.isHide = true; } else { this.isHide = false; }
+    this.isHide = !this.isHide;
     this.logs.push(this.num++);
     console.log(this.logs);
 
